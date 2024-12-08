@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/web.css">
+    <script src="js/web.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- nome -->
+        <p class="fs-3" id="valor"></p>
+        <!-- Formulario -->
+        <div>
+            <h2><label for="nome">Nome:</label></h2>
+            <input class="texto" type="text" id="nome" placeholder="Digite o nome">
+            <h2><label for="Descrição">Descrição:</label></h2>
+            <textarea class="texto" id="descricao" rows="2" placeholder="Digite a descrição"></textarea>
+        </div>
+        <div>
+            <h2>Data Limite</h2>
+            <input class="texto" type="date" name="" id="limit-date">
+        </div>
+        <!-- Overlays -->
+        <div class="flex" id="overlays">
+            <div class="overlay-trigger" data-overlay="overlay-2">
+                <h2>Repetição</h2>
+                <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000">
+                    <path
+                        d="M280-80 120-240l160-160 56 58-62 62h406v-160h80v240H274l62 62-56 58Zm-80-440v-240h486l-62-62 56-58 160 160-160 160-56-58 62-62H280v160h-80Z" />
+                </svg>
+                <button class="btn clear">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></button>
+                <p class="visualizar-txt" id="repeat"></p>
+            </div>
+            <div class="overlay-trigger" data-overlay="overlay-3">
+                <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000">
+                    <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                </svg>
+                <h2>Adicionar tags</h2>
+                <button class="btn clear"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></button>
+                <p class="visualizar-txt" id="tags-criadas"></p>
+            </div>
+            <div class="overlay-trigger" data-overlay="overlay-4">
+                <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000">
+                    <path
+                        d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113Z" />
+                </svg>
+                <h2>Integrantes</h2>
+                <button class="btn clear"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></button>
+                <p class="visualizar-txt" id=users></p>
+            </div>
+            <div class="overlay-trigger" data-overlay="overlay-5">
+                <svg class="icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#000">
+                    <path
+                        d="M360-320h80v-320h-80v320Zm160 0h80v-320h-80v320ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                </svg>
+                <h2>Pausas</h2>
+                <button class="btn clear"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></button>
+                <p class="visualizar-txt" id=pauses></p>
+            </div>
+        </div>
+
+        <!-- Overlays Contenteudo -->
+        <div id="overlay-2" class="overlay">
+            <div class="overlay-content">
+                <h2>Repetição</h2>
+                <div class="d-flex border-bottom border-black border-3">
+                    <h3 class="fs-6">Tipo:</h3>
+                    <select name="tipo" id="tipo">
+                        <option value="diario">Diário</option>
+                        <option value="semanal">Semanal</option>
+                        <option value="mensal">Mensal</option>
+                    </select>
+                </div>
+                <div class="d-flex">
+                    <h3 class="fs-6">Fim</h3>
+                    <form>
+                        <input type="radio" id="infinito" name="fim" value="infinito" required>
+                        <label for="infinito">Infinito</label><br>
+                        <input type="radio" id="data-limite" name="fim" value="data-limite" required>
+                        <label for="data-limite">Até</label>
+                    </form>
+                </div>
+                <div class="d-flex btns">
+                    <button class="btn close-btn">Cancelar</button>
+                    <button class="btn ok">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay3 -->
+        <div id="overlay-3" class="overlay">
+            <div class="overlay-content">
+                <h2>Tags</h2>
+                <label for="tags"></label>
+                <input class="texto" type="text" id="tags" placeholder="Digite a tag">
+                <p id="tags-criadas"></p>
+                <div class="d-flex btns">
+                    <button class="btn close-btn">Cancelar</button>
+                    <button class="btn ok">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay4 -->
+        <div id="overlay-4" class="overlay">
+            <div class="overlay-content">
+                <h2>Adicionar participantes</h2>
+                <label for="emails"></label>
+                <input class="texto" type="email" id="emails" placeholder="Digite o email">
+                <p id="tags-criadas"></p>
+                <div class="d-flex btns">
+                    <button class="btn close-btn">Cancelar</button>
+                    <button class="btn ok">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay5 -->
+        <div id="overlay-5" class="overlay">
+            <div class="overlay-content">
+                <h2>Pausas</h2>
+                <div class="d-flex">
+                    <label class="fs-6" for="intervalo">Intervalo</label>
+                    <input type="text" class="texto" id="intervalo" placeholder="Digite o intervalo">
+                    <p>Min</p>
+                </div>
+                <div class="d-flex btns">
+                    <button class="btn close-btn">Cancelar</button>
+                    <button class="btn ok">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!-- Botoes -->
+        <div class="btns">
+            <button class="acoes adicionar">
+                <img class="icon" src="img/plus.png" alt="">
+            </button>
+            <button class="acoes atualizar">
+                <img class="icon" src="img/refresh.png" alt="">
+            </button>
+            <button class="acoes deletar">
+                <img class="icon" src="img/trash-solid.png" alt="">
+            </button>
+        </div>
+        <!-- Tarefas -->
+        <div>
+            <h2>Tarefas cadastradas</h2>
+            <img src="img/filter.png" alt="filter">
+            <div class="colunas">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

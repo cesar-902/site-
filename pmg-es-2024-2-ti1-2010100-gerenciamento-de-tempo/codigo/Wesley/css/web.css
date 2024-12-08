@@ -1,0 +1,223 @@
+
+body {
+    background-color: #FEFBF8;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 14pt;
+}
+
+.visualizar-txt{
+    color: hwb(278 0% 0%);
+}
+
+.icons{
+    height: 50px;
+}
+
+/* Alinhar texto com as opcoes - Inicio */
+.d-flex label,
+.d-flex input,
+.d-flex select,
+.d-flex h3,
+.d-flex p {
+    margin: 0;
+    margin-left: 2px;
+}
+
+/* Alinhar texto com as opcoes - Fim */
+
+
+/* Formulario - Inicio*/
+.texto {
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+    min-height: 40px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 200px;
+    resize: vertical;
+}
+
+h2~img {
+    width: 10%;
+    max-width: 40px;
+}
+
+/* Formulario - Fim */
+
+/* Overlays */
+#overlays img {
+    width: 10%;
+    max-width: 40px;
+}
+
+#overlays{
+    gap: 10px;
+}
+
+.flex div {
+    cursor: pointer; /* Mostar areas cliclaveis*/
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: #FEFBF8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border: 3px solid black;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+/* Overlays - Fim */
+
+/* Select */
+select {
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 12pt !important;
+    border-radius: 10px;
+    border: 1px solid #5a345a !important;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.btn {
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+.ok {
+    color: #00FF73;
+    border: 1px solid #00FF73;
+    margin: 0 0 0 10px;
+}
+
+.close-btn{
+    color: hsl(3, 73%, 42%);
+    border: 1px solid #75140F;
+    margin-left: auto;
+}
+
+/* Botões (Adicionar, Atualizar, Deletar, Limpar) - Inicio */
+.clear{
+    color:white;
+    background-color: #5a345a;
+    border: 1px solid hsl(300, 38%, 18%);
+}
+.clear:hover{
+    color: white;
+    background-color: hsl(300, 21%, 43%);
+}
+
+.btns {
+    padding-top: 2px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.acoes {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 80px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.adicionar {
+    background-color: #E6F0E0;
+    border: 1px solid #35750F;
+}
+
+.atualizar {
+    background-color: #EEF9FC;
+    border: 1px solid #0F7564;
+}
+
+.deletar {
+    background-color: #EADADA;
+    border: 1px solid #75140F;
+    margin-left: auto;
+}
+
+.icon {
+    height: 4vh !important;
+}
+
+/* Botões - Fim */
+
+/* Tarefas - Inicio */
+
+.colunas {
+        display: grid;                          
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 20px;                              
+    }
+
+.tarefa{
+    background-color: rgba(238, 221, 34, 0.16);
+    color: #000;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border-radius: 20px;
+    font-size: 12pt;
+    height: 5rem;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.tarefa-selecionada{
+    border: 3px solid black;
+}
+
+@media all and (min-width: 1000px) {
+    .acoes {
+        max-width: 300px;
+    }
+
+    .overlay-content {
+        width: 600px;
+    }
+}
+@media (max-width: 767px) {
+    .rol {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lixeira de Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="left-header">
+            <img src="./icons/trash-solid 1.png" alt="Ícone">
+            <p>Recuperar nota(s)</p>
+        </div>
+        <div class="right-header">
+            <button id="options-btn">
+                <img src="./icons/option icon.png" alt="Opções">
+            </button>
+            <div id="dropdown" class="dropdown hidden">
+                <ul>
+                    <li><button>Ordenar por mais recentes</button></li>
+                    <li><button>Ordenar por mais antigas</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <hr class="separator">
+
+    <main>
+        <div id="active-tasks-container">
+            <h1>Tasks Ativas</h1>
+        </div>
+        <div id="tasks-container">
+            <h1>Lixeira</h1>
+        </div>
+    </main>
+
+    <footer>
+        <button id="restore-btn" class="hidden"><img src="./icons/update-12-512 1.png" alt=""></button>
+    </footer>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p>Deseja restaurar essa(s) nota(s)?</p>
+            <button id="confirm-yes">Sim</button>
+            <button id="confirm-no">Não</button>
+        </div>
+    </div>
+
+    <script src="trash.js" defer></script>
+</body>
+</html>

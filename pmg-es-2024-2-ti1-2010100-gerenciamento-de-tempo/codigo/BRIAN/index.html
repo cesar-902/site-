@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de estudos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <header class="cabeçalho">
+        <a href="#"><img src="https://s3-alpha-sig.figma.com/img/ba44/962f/583ce32b0b76145cd5574d455c3711a3?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J9SAXtGUbAslbCX1aaubSnkSG-YrhasGZ-6rqYiS6GNLRZQtjSu3SNt1PVaao-tkpMb2xtmhTt-VDLtNfJ42P3j4XNGnBArE4kdBgzlRrOuXdnaI40ESSyO0XzdTw86eWQ770aCqVAmZ-4FhSKnCx-WIpkIQF-XUXFjitBljQcH60W33fbgyDdkP8sFkjeVXq1-vHXoIz~035OOpPct2vvWWgKFHOAwE44bWtYrfNryM0Twy1r6H3zXiznGqwLhC7bwvxchoMVKTSg8DLZPXmbyKdmT87e063BY3Q-sy01J9Fz6L9EIyu-LSndhdZnxZQ0q-KyzILdR~D2VUm74EfQ__" alt="logo-estudos" width="50px"></a>
+        <h1>Área de estudos</h1>
+        <h1 id="contagem"><strong>Total:</strong> <span id="total"> 0 </span></h1>
+    </header>
+    <main>
+        <section>
+            <div class="notas">
+                <div class="lista-tarefas">
+                    <p class="tarefas">Estudar para prova de Matemática </p>
+                    <p class="prioridade">Alta</p>
+                    <input type="checkbox" name="confirmar" id="confirmar">
+                    <label for="tarefas"></label>
+                </div>
+                <div class="lista-tarefas">
+                    <p class="tarefas">Fazer trabalho de  História</p>
+                    <p class="prioridade">Média</p>
+                    <input type="checkbox" name="confirmar" id="confirmar">
+                    <label for="tarefas"></label>
+                </div>
+                <div class="lista-tarefas">
+                    <p class="tarefas">Ler capítulo de Química </p>
+                    <p class="prioridade">Baixa</p>
+                    <input type="checkbox" name="confirmar" id="confirmar">
+                    <label for="tarefas"></label>
+                </div>
+                <div class="lista-tarefas">
+                    <p class="tarefas">Revisar notas de Biologia</p>
+                    <p class="prioridade">Alta</p>
+                    <input type="checkbox" name="confirmar" id="confirmar">
+                    <label for="tarefas"></label>
+                </div>
+            </div>
+            <forms>
+                <div id="cadastro">
+                    <div>
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome" id="nome"></div>
+                    <div>
+                        <label for="materia">Matéria: </label>
+                        <input type="text" name="materia" id="materia">
+                    </div>
+                    <div>
+                        <label for="Descrição">Descrição: </label>
+                        <input type="text" name="descrição" id="descrição">
+                        
+                    </div>
+                    <div>
+                        <label for="Prioridade">Prioridade: </label>
+                        <select name="prioridade" id="prioridade">
+                            <option value="Baixa">Baixa</option>
+                            <option value="Média">Média</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="btnsalvar" type="button" value="salvar">
+                    </div>
+            </forms>
+        </section>
+        <section >
+            <div id="notas">
+                <button id="btncarregardados">Carregar Dados</button>
+                <ul id="mostrarNotas">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
